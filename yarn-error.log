@@ -1,0 +1,96 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Gabriel\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js
+
+PATH: 
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\Git\cmd;C:\Program Files\dotnet\;C:\Users\Gabriel\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Gabriel\AppData\Roaming\npm;C:\Users\Gabriel\.dotnet\tools
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.16.1
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/rxjs/-/rxjs-6.6.3.tgz: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\Gabriel\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:141289:19)
+      at Object.onceWrapper (events.js:421:28)
+      at ClientRequest.emit (events.js:315:20)
+      at TLSSocket.emitRequestTimeout (_http_client.js:784:9)
+      at Object.onceWrapper (events.js:421:28)
+      at TLSSocket.emit (events.js:327:22)
+      at TLSSocket.Socket._onTimeout (net.js:483:8)
+      at listOnTimeout (internal/timers.js:554:17)
+      at processTimers (internal/timers.js:497:7)
+
+npm manifest: 
+  {
+    "name": "prjConsumindo",
+    "version": "0.0.1",
+    "author": "Ionic Framework",
+    "homepage": "https://ionicframework.com/",
+    "scripts": {
+      "ng": "ng",
+      "start": "ng serve",
+      "build": "ng build",
+      "test": "ng test",
+      "lint": "ng lint",
+      "e2e": "ng e2e"
+    },
+    "private": true,
+    "dependencies": {
+      "@angular/common": "~11.2.0",
+      "@angular/core": "~11.2.0",
+      "@angular/forms": "~11.2.0",
+      "@angular/platform-browser": "~11.2.0",
+      "@angular/platform-browser-dynamic": "~11.2.0",
+      "@angular/router": "~11.2.0",
+      "@capacitor/core": "3.0.0",
+      "@ionic/angular": "^5.5.2",
+      "rxjs": "~6.6.0",
+      "tslib": "^2.0.0",
+      "zone.js": "~0.10.2"
+    },
+    "devDependencies": {
+      "@angular-devkit/build-angular": "0.1102.10",
+      "@angular-eslint/builder": "2.0.2",
+      "@angular-eslint/eslint-plugin": "2.0.2",
+      "@angular-eslint/eslint-plugin-template": "2.0.2",
+      "@angular-eslint/template-parser": "2.0.2",
+      "@angular/cli": "~11.2.4",
+      "@angular/compiler": "~11.2.0",
+      "@angular/compiler-cli": "~11.2.0",
+      "@angular/language-service": "~11.2.0",
+      "@capacitor/cli": "3.0.0",
+      "@ionic/angular-toolkit": "^3.1.1",
+      "@types/jasmine": "~3.6.0",
+      "@types/jasminewd2": "~2.0.3",
+      "@types/node": "^12.11.1",
+      "@typescript-eslint/eslint-plugin": "4.16.1",
+      "@typescript-eslint/parser": "4.16.1",
+      "eslint": "^7.6.0",
+      "eslint-plugin-import": "2.22.1",
+      "eslint-plugin-jsdoc": "30.7.6",
+      "eslint-plugin-prefer-arrow": "1.2.2",
+      "jasmine-core": "~3.7.1",
+      "jasmine-spec-reporter": "~5.0.0",
+      "karma": "~5.2.0",
+      "karma-chrome-launcher": "~3.1.0",
+      "karma-coverage": "~2.0.3",
+      "karma-coverage-istanbul-reporter": "~3.0.2",
+      "karma-jasmine": "~4.0.0",
+      "karma-jasmine-html-reporter": "^1.5.0",
+      "protractor": "~7.0.0",
+      "ts-node": "~8.3.0",
+      "typescript": "~4.0.2"
+    },
+    "description": "An Ionic project"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
