@@ -1,16 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class ApiService {
 
-  private url: string='https://jsonplaceholder.typicode.com/'
+  private api = 'http://localhost/Atividade_PAM';
 
   constructor(private http: HttpClient) { }
 
   getData() {
-    return this.http.get(`${this.url}todos/1`)
+    return this.http.get(`${this.api}/selectUser.php`);
+  }
+  insertData({name, email}: any){
+    const options = {responseType: 'text' as 'json' };
+    return this.http.post(`${this.api}/insertUser.php`, {name, email}, options);
   }
 }

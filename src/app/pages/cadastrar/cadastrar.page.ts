@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
 import { ApiService } from '../../service/api.service';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
@@ -10,26 +9,22 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./cadastrar.page.scss'],
 })
 export class CadastrarPage implements OnInit {
-
-  constructor(private apiService: ApiService, private router: Router, public alertController: AlertController) {
-    this.showData()
+  user = {
+    name: '',
+    email: ''
+  };
+  constructor(
+    private apiService: ApiService,
+    private router: Router,
+    public alertController: AlertController,
+  ) {
+    this.apiService.insertData(this.user);
   }
 
   ngOnInit() {
   }
 
-  showData() {
-    this.apiService.getData().subscribe(data => {
-      //console.log(data)
-    })
-  }
-
- user = {
-   name: '',
-   email: ''
- }
-
- async successAlert() {
+  async successAlert() {
   const alert = await this.alertController.create({
     header: 'Perfeito!',
     message: 'Cadastrado com sucesso!',
@@ -40,12 +35,16 @@ export class CadastrarPage implements OnInit {
 
   const { role } = await alert.onDidDismiss();
   //console.log('onDidDismiss resolved with role', role);
-}
-
+  }
   onSubmit(){
-    //console.log('@&#$y@#&eAY87FSFY87E')
-    //console.log(this.user)
-    this.router.navigate([''])
-    this.successAlert()
+    if(this.user.name === '' || this.user.email === ''){
+      return;
+    }
+    console.log(this.user);
+    const name = this.user.name;
+    const email = this.user.email;
+    this.apiService.insertData({name, email}).subscribe();
+    this.router.navigate(['']);
+    this.successAlert();
   }
 }
