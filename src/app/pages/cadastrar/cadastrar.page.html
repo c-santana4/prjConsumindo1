@@ -1,7 +1,7 @@
 <ion-header>
 <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-menu-button color="danger"></ion-menu-button>
     </ion-buttons>
 
     <ion-title>Cadastrar</ion-title>
@@ -9,20 +9,23 @@
 </ion-header>
 
 <ion-content>
-
-  <h1>Cadastro</h1>
-  <form #form='ngForm' (ngSubmit)='onSubmitForm()'>
+  
+  <form #form='ngForm' (ngSubmit)='onSubmit()'>
     <ion-list>
+      <ion-list-header>
+        <h1>Preencha seus dados!</h1>
+      </ion-list-header>
+
       <ion-item>
-        <ion-input type='text' placeholder='Digite seu nome' ></ion-input>
+        <ion-input type='text' placeholder='Digite seu nome' name='name' [(ngModel)]='user.name'></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input type='email' placeholder='Digite seu email' ></ion-input>
+        <ion-input type='email' placeholder='Digite seu email' name='email' [(ngModel)]='user.email'></ion-input>
       </ion-item>      
     </ion-list>
     
-    <ion-button type='submit' expand='full'> Cadastrar </ion-button>
+    <ion-button type='submit' expand='full' shape='round' color='danger'> Cadastrar </ion-button>
 
   </form>
 
