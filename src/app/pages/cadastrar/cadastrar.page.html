@@ -1,0 +1,29 @@
+<ion-header>
+<ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Cadastrar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <h1>Cadastro</h1>
+  <form #form='ngForm' (ngSubmit)='onSubmitForm()'>
+    <ion-list>
+      <ion-item>
+        <ion-input type='text' placeholder='Digite seu nome' ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input type='email' placeholder='Digite seu email' ></ion-input>
+      </ion-item>      
+    </ion-list>
+    
+    <ion-button type='submit' expand='full'> Cadastrar </ion-button>
+
+  </form>
+
+</ion-content>
