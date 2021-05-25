@@ -1,5 +1,6 @@
+import { HttpClientJsonpModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { ApiService } from 'src/app/service/api.service';
 
 @Component({
   selector: 'app-lista',
@@ -8,9 +9,18 @@ import { NavController } from '@ionic/angular';
 })
 export class ListaPage implements OnInit {
 
-  constructor(private navCtrl : NavController) { }
+  userList: any = [];
 
+  constructor(private api: ApiService) {
+    this.api.getData();
+  }
+  getData(){
+    this.api.getData().subscribe((data) => {
+      this.userList = data;
+    });
+  }
   ngOnInit() {
+    this.getData();
   }
 
 }
