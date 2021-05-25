@@ -32,8 +32,8 @@ export class CadastrarPage implements OnInit {
  async successAlert() {
   const alert = await this.alertController.create({
     header: 'Perfeito!',
-    message: 'Usuário cadastrado com sucesso!',
-    buttons: ['Ok!']
+    message: 'Cadastrado com sucesso!',
+    buttons: ['Ok']
   });
 
   await alert.present();

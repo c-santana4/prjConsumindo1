@@ -9,6 +9,5 @@ export class AppComponent {
     { title: 'Cadastrar', url: 'cadastrar', icon: 'log-in' },
     { title: 'Lista', url: 'lista', icon: 'list' },
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
 }
